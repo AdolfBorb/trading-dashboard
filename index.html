@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitso Swing — Dashboard Fase 0</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;background:#0d1117;color:#e6edf3;padding:14px;max-width:720px;margin:0 auto}
+h1{font-size:1.15rem} .sub{color:#8b949e;font-size:.8rem;margin-bottom:14px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:16px}
+.kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:10px 12px}
+.kpi label{font-size:.68rem;color:#8b949e;text-transform:uppercase}
+.kpi b{font-size:1.05rem}
+h2{font-size:.95rem;margin:18px 0 8px;color:#58a6ff}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:12px;margin-bottom:10px}
+.card-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.sym{font-weight:700;font-size:1rem}
+.badge{font-size:.65rem;padding:2px 8px;border-radius:99px;font-weight:600}
+.b-open{background:#1a3a2a;color:#3fb950} .b-pend{background:#3a2f1a;color:#d29922} .b-closed{background:#21262d;color:#8b949e}
+.score{margin-left:auto;font-size:.72rem;color:#8b949e}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.grid label{font-size:.62rem;color:#8b949e;display:block;text-transform:uppercase}
+.grid b{font-size:.85rem}
+.up{color:#3fb950} .down{color:#f85149}
+.bar{position:relative;height:8px;background:#21262d;border-radius:99px;margin:12px 0 4px}
+.bar-fill{position:absolute;height:100%;background:linear-gradient(90deg,#f85149,#d29922,#3fb950);border-radius:99px}
+.bar-entry{position:absolute;top:-3px;width:2px;height:14px;background:#e6edf3}
+.bar-lbl{display:flex;justify-content:space-between;font-size:.68rem;color:#8b949e}
+.razon{font-size:.75rem;color:#c9d1d9;margin-top:8px}
+.meta{font-size:.65rem;color:#6e7681;margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:.8rem}
+th,td{padding:7px 6px;text-align:left;border-bottom:1px solid #21262d}
+th{color:#8b949e;font-size:.65rem;text-transform:uppercase}
+.empty{color:#6e7681;font-size:.8rem;padding:8px 0}
+.footer{margin-top:22px;font-size:.7rem;color:#6e7681;text-align:center;line-height:1.6}
+.sim{background:#3a2f1a;color:#d29922;text-align:center;font-size:.72rem;font-weight:700;padding:6px;border-radius:8px;margin-bottom:12px}
+</style></head><body>
+<h1>📊 Bitso Swing — Reporte de operaciones</h1>
+<div class="sub">Actualizado 2026-10-05 17:15 (local) · USD/MXN 18.07</div>
+<div class="sim">FASE 0 SIMULADO — se registra pero NO se opera dinero real</div>
+<div class="kpis">
+  <div class="kpi"><label>Capital inicial</label><b>$553.56 USDT</b></div>
+  <div class="kpi"><label>Equity sim</label><b>$553.56 USDT</b></div>
+  <div class="kpi"><label>P&amp;L cerrado</label><b class="up">$0.00 USDT</b></div>
+  <div class="kpi"><label>P&amp;L abierto</label><b class="up">$0.00 USDT</b></div>
+  <div class="kpi"><label>Riesgo en juego (si todos tocan SL)</label><b class="down">-$11.35 USDT</b></div>
+  <div class="kpi"><label>Cerradas / Win rate</label><b>0 / —</b></div>
+</div>
+<h2>▶ En progreso (órdenes Limit pendientes de llenar)</h2>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="sym">ETH/USD</span>
+        <span class="badge b-pend">PENDIENTE</span>
+        <span class="score">score 86</span>
+      </div>
+      <div class="grid">
+        <div><label>Entrada Limit</label><b>2,703.00</b></div>
+        <div><label>Precio actual</label><b>2,714.13</b></div>
+        <div><label>P&amp;L neto actual*</label><b class="down">$-1.04 USDT</b></div>
+        <div><label>SL</label><b class="down">2,663.42</b></div>
+        <div><label>TP</label><b class="up">2,782.16</b></div>
+        <div><label>Tamaño</label><b>$550 USDT</b></div>
+        <div><label>Pérdida neta si SL*</label><b class="down">$-11.35 USDT</b></div>
+        <div><label>Ganancia neta si TP*</label><b class="up">+$12.81 USDT</b></div>
+        <div><label>Comisión Alpha</label><b>-$3.30 USDT</b></div>
+      </div>
+      <div class="bar"><div class="bar-fill" style="width:42.7%"></div>
+        <div class="bar-entry" style="left:33.3%"></div></div>
+      <div class="bar-lbl"><span>SL 2,663.42</span><span class="up">+0.41% (+0.28R)</span><span>TP 2,782.16</span></div>
+      <div class="razon">Pullback a EMA20 4H con rebote; RSI 52.1; vol rel 3.28x; agresion compradora 94% en Bitso</div>
+      <div class="meta">2026-10-05 12:15 · modo=sim · régimen ALCISTA</div>
+    </div>
+<h2>● Abiertas (llenadas, con SL/TP activos)</h2>
+<p class="empty">Sin posiciones abiertas.</p>
+<h2>✔ Realizadas (cerradas)</h2>
+<table><tr><th>Activo</th><th>Cierre</th><th>Salida</th><th>Resultado R</th><th>Resultado %</th></tr>
+<tr><td colspan="5" class="empty">Aún no hay operaciones cerradas.</td></tr></table>
+<div class="footer">* Neto de comisiones Bitso Alpha: 0.30% maker entrada + 0.30% salida (~0.60% redondo).<br>
+Generado por reporte.py desde bitacora_trades.csv · Precios: Binance · FX: Bitso<br>
+P&amp;L de pendientes se calcula como si la Limit se llenara en la entrada (hipotético).<br>
+Historial completo en historico/ · Sincronizado vía GitHub Pages.</div>
+</body></html>
