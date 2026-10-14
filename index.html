@@ -35,50 +35,29 @@ th{color:#8b949e;font-size:.65rem;text-transform:uppercase}
 .sim{background:#3a2f1a;color:#d29922;text-align:center;font-size:.72rem;font-weight:700;padding:6px;border-radius:8px;margin-bottom:12px}
 </style></head><body>
 <h1>📊 Bitso Swing — Reporte de operaciones</h1>
-<div class="sub">Actualizado 2026-10-13 22:02 (local) · USD/MXN 18.37</div>
+<div class="sub">Actualizado 2026-10-14 11:04 (local) · USD/MXN 18.43</div>
 <div class="sim">FASE 0 SIMULADO — se registra pero NO se opera dinero real</div>
 <div class="kpis">
-  <div class="kpi"><label>Capital inicial</label><b>$544.45 USDT</b></div>
-  <div class="kpi"><label>Equity sim</label><b>$518.68 USDT</b></div>
-  <div class="kpi"><label>P&amp;L cerrado</label><b class="down">$-22.79 USDT</b></div>
-  <div class="kpi"><label>P&amp;L abierto</label><b class="down">$-2.99 USDT</b></div>
-  <div class="kpi"><label>Riesgo en juego (si todos tocan SL)</label><b class="down">-$4.62 USDT</b></div>
-  <div class="kpi"><label>Cerradas / Win rate</label><b>2 / 0%</b></div>
+  <div class="kpi"><label>Capital inicial</label><b>$542.51 USDT</b></div>
+  <div class="kpi"><label>Equity sim</label><b>$515.10 USDT</b></div>
+  <div class="kpi"><label>P&amp;L cerrado</label><b class="down">$-27.40 USDT</b></div>
+  <div class="kpi"><label>P&amp;L abierto</label><b class="up">$0.00 USDT</b></div>
+  <div class="kpi"><label>Riesgo en juego (si todos tocan SL)</label><b class="down">-$0.00 USDT</b></div>
+  <div class="kpi"><label>Cerradas / Win rate</label><b>3 / 0%</b></div>
 </div>
 <h2>▶ En progreso (órdenes Limit pendientes de llenar)</h2>
 <p class="empty">Sin órdenes pendientes.</p>
 <h2>● Abiertas (llenadas, con SL/TP activos)</h2>
-
-    <div class="card">
-      <div class="card-head">
-        <span class="sym">ATOM/USD</span>
-        <span class="badge b-open">ABIERTA</span>
-        <span class="score">score 71</span>
-      </div>
-      <div class="grid">
-        <div><label>Entrada Limit</label><b>1.88</b></div>
-        <div><label>Precio actual</label><b>1.82</b></div>
-        <div><label>P&amp;L neto actual*</label><b class="down">$-2.99 USDT</b></div>
-        <div><label>SL</label><b class="down">1.79</b></div>
-        <div><label>TP</label><b class="up">2.07</b></div>
-        <div><label>Tamaño</label><b>$80 USDT</b></div>
-        <div><label>Pérdida neta si SL*</label><b class="down">$-4.62 USDT</b></div>
-        <div><label>Ganancia neta si TP*</label><b class="up">+$7.70 USDT</b></div>
-        <div><label>Comisión Alpha</label><b>-$0.48 USDT</b></div>
-      </div>
-      <div class="bar"><div class="bar-fill" style="width:12.9%"></div>
-        <div class="bar-entry" style="left:33.3%"></div></div>
-      <div class="bar-lbl"><span>SL 1.79</span><span class="down">-3.13% (-0.61R)</span><span>TP 2.07</span></div>
-      <div class="razon">Pullback a EMA20 4H con rebote; RSI 51.6; vol rel 3.08x; E20&gt;E50 4H; slippage Bitso 0.049%</div>
-      <div class="meta">2026-10-13 15:00 · modo=sim · régimen ALCISTA</div>
-    </div>
+<p class="empty">Sin posiciones abiertas.</p>
 <h2>✔ Realizadas (cerradas)</h2>
 <table><tr><th>Activo</th><th>Cierre</th><th>Salida</th><th>Resultado R</th><th>Resultado %</th></tr>
 <tr><td>ETH</td><td>2026-10-06</td>
       <td>2,663.42</td><td class="down">-1.45R</td>
       <td class="down">-2.12%</td></tr><tr><td>SOL</td><td>2026-10-06</td>
       <td>117.99</td><td class="down">-1.34R</td>
-      <td class="down">-2.60%</td></tr></table>
+      <td class="down">-2.60%</td></tr><tr><td>ATOM</td><td>2026-10-14</td>
+      <td>1.79</td><td class="down">-1.13R</td>
+      <td class="down">-5.77%</td></tr></table>
 <div class="footer">* Neto de comisiones Bitso Alpha (libros USD, nivel &lt;$1,000): entrada maker 0.30% + salida TP maker 0.30% / salida SL taker 0.36%.<br>
 Generado por reporte.py desde bitacora_trades.csv · Precios: Binance · FX: Bitso<br>
 P&amp;L de pendientes se calcula como si la Limit se llenara en la entrada (hipotético).<br>
